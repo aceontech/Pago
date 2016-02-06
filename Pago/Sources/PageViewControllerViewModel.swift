@@ -30,7 +30,7 @@ public struct BasicPage : Page {
     public var id:String
     public var storyboardResource:StoryboardResource
     
-    init(id:String, storyboardResource:StoryboardResource) {
+    public init(id:String, storyboardResource:StoryboardResource) {
         self.id = id
         self.storyboardResource = storyboardResource
     }
