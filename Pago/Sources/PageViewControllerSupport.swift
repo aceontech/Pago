@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension UIViewController {
+public extension UIViewController {
     func makeChildController(of controller:UIViewController?) {
         if let c = controller {
             c.addChildViewController(self)

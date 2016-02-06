@@ -31,7 +31,7 @@ public class PageViewController<ViewModelType : PageViewControllerViewModel> : U
     
     lazy var viewModel:ViewModelType = ViewModelType()
     
-    init() {
+    public init() {
         super.init(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
     }
     
