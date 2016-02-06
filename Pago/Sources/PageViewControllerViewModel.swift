@@ -55,7 +55,7 @@ public protocol PageViewControllerViewModel {
 /**
     Adds a default implementation for the PageViewControllerViewModel protocol.
 */
-extension PageViewControllerViewModel {
+public extension PageViewControllerViewModel {
     func pageAtIndex(index:Int) -> Page? {
         if(index > -1 && index < self.pages.count) {
             return self.pages[index]
