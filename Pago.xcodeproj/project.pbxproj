@@ -10,6 +10,10 @@
 		FAE8221D1C66A9500075A28B /* Pago.h in Headers */ = {isa = PBXBuildFile; fileRef = FAE8221C1C66A9500075A28B /* Pago.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAE822241C66A9500075A28B /* Pago.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE822191C66A9500075A28B /* Pago.framework */; };
 		FAE822291C66A9500075A28B /* PagoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE822281C66A9500075A28B /* PagoTests.swift */; };
+		FAE822381C66AB060075A28B /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE822341C66AB060075A28B /* PageViewController.swift */; };
+		FAE822391C66AB060075A28B /* PageViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE822351C66AB060075A28B /* PageViewControllerViewModel.swift */; };
+		FAE8223A1C66AB060075A28B /* PageViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE822361C66AB060075A28B /* PageViewControllerProvider.swift */; };
+		FAE8223B1C66AB060075A28B /* PageViewControllerSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE822371C66AB060075A28B /* PageViewControllerSupport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		FAE822231C66A9500075A28B /* PagoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PagoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE822281C66A9500075A28B /* PagoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoTests.swift; sourceTree = "<group>"; };
 		FAE8222A1C66A9500075A28B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE822341C66AB060075A28B /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		FAE822351C66AB060075A28B /* PageViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewControllerViewModel.swift; sourceTree = "<group>"; };
+		FAE822361C66AB060075A28B /* PageViewControllerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewControllerProvider.swift; sourceTree = "<group>"; };
+		FAE822371C66AB060075A28B /* PageViewControllerSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewControllerSupport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,10 @@
 		FAE822331C66AA6B0075A28B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FAE822341C66AB060075A28B /* PageViewController.swift */,
+				FAE822351C66AB060075A28B /* PageViewControllerViewModel.swift */,
+				FAE822361C66AB060075A28B /* PageViewControllerProvider.swift */,
+				FAE822371C66AB060075A28B /* PageViewControllerSupport.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -202,6 +214,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE822391C66AB060075A28B /* PageViewControllerViewModel.swift in Sources */,
+				FAE822381C66AB060075A28B /* PageViewController.swift in Sources */,
+				FAE8223A1C66AB060075A28B /* PageViewControllerProvider.swift in Sources */,
+				FAE8223B1C66AB060075A28B /* PageViewControllerSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +332,7 @@
 		FAE8222E1C66A9500075A28B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -327,12 +344,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jarroo.oss.Pago;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		FAE8222F1C66A9500075A28B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
