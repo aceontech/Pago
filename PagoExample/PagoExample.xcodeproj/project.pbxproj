@@ -1,0 +1,345 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAE822491C66ADEC0075A28B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE822481C66ADEC0075A28B /* AppDelegate.swift */; };
+		FAE8224E1C66ADEC0075A28B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE8224C1C66ADEC0075A28B /* Main.storyboard */; };
+		FAE822501C66ADEC0075A28B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE8224F1C66ADEC0075A28B /* Assets.xcassets */; };
+		FAE822531C66ADEC0075A28B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE822511C66ADEC0075A28B /* LaunchScreen.storyboard */; };
+		FAE8225D1C66B08E0075A28B /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8225C1C66B08E0075A28B /* ExampleViewController.swift */; };
+		FAE822601C66B1720075A28B /* Pago.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE8225F1C66B1720075A28B /* Pago.framework */; };
+		FAE822621C66B27E0075A28B /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE822611C66B27E0075A28B /* ExampleViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FAE822451C66ADEC0075A28B /* PagoExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PagoExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE822481C66ADEC0075A28B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAE8224D1C66ADEC0075A28B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAE8224F1C66ADEC0075A28B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		FAE822521C66ADEC0075A28B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAE822541C66ADEC0075A28B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		FAE8225C1C66B08E0075A28B /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		FAE8225F1C66B1720075A28B /* Pago.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pago.framework; path = Carthage/Build/iOS/Pago.framework; sourceTree = "<group>"; };
+		FAE822611C66B27E0075A28B /* ExampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAE822421C66ADEC0075A28B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAE822601C66B1720075A28B /* Pago.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAE8223C1C66ADEC0075A28B = {
+			isa = PBXGroup;
+			children = (
+				FAE8225F1C66B1720075A28B /* Pago.framework */,
+				FAE822471C66ADEC0075A28B /* PagoExample */,
+				FAE822461C66ADEC0075A28B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAE822461C66ADEC0075A28B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAE822451C66ADEC0075A28B /* PagoExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAE822471C66ADEC0075A28B /* PagoExample */ = {
+			isa = PBXGroup;
+			children = (
+				FAE8225B1C66B08E0075A28B /* Sources */,
+				FAE8225E1C66B0C40075A28B /* Resources */,
+				FAE822481C66ADEC0075A28B /* AppDelegate.swift */,
+			);
+			path = PagoExample;
+			sourceTree = "<group>";
+		};
+		FAE8225B1C66B08E0075A28B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FAE8225C1C66B08E0075A28B /* ExampleViewController.swift */,
+				FAE822611C66B27E0075A28B /* ExampleViewModel.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FAE8225E1C66B0C40075A28B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FAE8224F1C66ADEC0075A28B /* Assets.xcassets */,
+				FAE8224C1C66ADEC0075A28B /* Main.storyboard */,
+				FAE822511C66ADEC0075A28B /* LaunchScreen.storyboard */,
+				FAE822541C66ADEC0075A28B /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAE822441C66ADEC0075A28B /* PagoExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAE822571C66ADEC0075A28B /* Build configuration list for PBXNativeTarget "PagoExample" */;
+			buildPhases = (
+				FAE822411C66ADEC0075A28B /* Sources */,
+				FAE822421C66ADEC0075A28B /* Frameworks */,
+				FAE822431C66ADEC0075A28B /* Resources */,
+				FAE8225A1C66B01F0075A28B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PagoExample;
+			productName = PagoExample;
+			productReference = FAE822451C66ADEC0075A28B /* PagoExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAE8223D1C66ADEC0075A28B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Jarroo;
+				TargetAttributes = {
+					FAE822441C66ADEC0075A28B = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = FAE822401C66ADEC0075A28B /* Build configuration list for PBXProject "PagoExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAE8223C1C66ADEC0075A28B;
+			productRefGroup = FAE822461C66ADEC0075A28B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAE822441C66ADEC0075A28B /* PagoExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAE822431C66ADEC0075A28B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAE822531C66ADEC0075A28B /* LaunchScreen.storyboard in Resources */,
+				FAE822501C66ADEC0075A28B /* Assets.xcassets in Resources */,
+				FAE8224E1C66ADEC0075A28B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FAE8225A1C66B01F0075A28B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Pago.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAE822411C66ADEC0075A28B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAE8225D1C66B08E0075A28B /* ExampleViewController.swift in Sources */,
+				FAE822621C66B27E0075A28B /* ExampleViewModel.swift in Sources */,
+				FAE822491C66ADEC0075A28B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FAE8224C1C66ADEC0075A28B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAE8224D1C66ADEC0075A28B /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		FAE822511C66ADEC0075A28B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAE822521C66ADEC0075A28B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAE822551C66ADEC0075A28B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAE822561C66ADEC0075A28B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAE822581C66ADEC0075A28B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = PagoExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jarroo.oss.PagoExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FAE822591C66ADEC0075A28B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = PagoExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jarroo.oss.PagoExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAE822401C66ADEC0075A28B /* Build configuration list for PBXProject "PagoExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAE822551C66ADEC0075A28B /* Debug */,
+				FAE822561C66ADEC0075A28B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAE822571C66ADEC0075A28B /* Build configuration list for PBXNativeTarget "PagoExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAE822581C66ADEC0075A28B /* Debug */,
+				FAE822591C66ADEC0075A28B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAE8223D1C66ADEC0075A28B /* Project object */;
+}
