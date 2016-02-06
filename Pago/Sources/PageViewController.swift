@@ -20,7 +20,7 @@ import UIKit
  
     - See `UIViewController` extension in `PageViewControllerSupport.swift`
 */
-class PageViewController<ViewModelType : PageViewControllerViewModel> : UIPageViewController {
+public class PageViewController<ViewModelType : PageViewControllerViewModel> : UIPageViewController {
     private lazy var provider:PageViewControllerProvider = { [unowned self] in
         let p = PageViewControllerProvider(pageViewController: self, model: self.viewModel)
         p.pageChangedHandler = { index in
@@ -35,7 +35,7 @@ class PageViewController<ViewModelType : PageViewControllerViewModel> : UIPageVi
         super.init(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         // Set up first view controller

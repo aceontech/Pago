@@ -12,13 +12,13 @@ import Foundation
 /**
     Tuple for identifying a storyboard resource
 */
-typealias StoryboardResource = (storyboard:String, id:String)
+public typealias StoryboardResource = (storyboard:String, id:String)
 
 /**
     Defines what a `Page` is. Models participating in the paging system need to adopt
     at least this protocol.
 */
-protocol Page {
+public protocol Page {
     var id:String { get set }
     var storyboardResource:StoryboardResource { get set }
 }
@@ -26,9 +26,9 @@ protocol Page {
 /**
     Most elementaty value-type implementation of a page
 **/
-struct BasicPage : Page {
-    var id:String
-    var storyboardResource:StoryboardResource
+public struct BasicPage : Page {
+    public var id:String
+    public var storyboardResource:StoryboardResource
 }
 
 // MARK: - PageViewController model -
@@ -37,7 +37,7 @@ struct BasicPage : Page {
     Defines the contract for view models of PageViewController. View models participating
     in the paging system must adopt this protocol
 */
-protocol PageViewControllerViewModel {
+public protocol PageViewControllerViewModel {
     var pages:[Page] { get set }
     
     func indexOfPageById(id:String) -> Int?
