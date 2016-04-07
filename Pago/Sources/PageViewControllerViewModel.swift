@@ -12,7 +12,7 @@ import Foundation
 /**
     Tuple for identifying a storyboard resource
 */
-public typealias StoryboardResource = (storyboard:String, id:String)
+public typealias StoryboardResource = (storyboard:UIStoryboard, id:String)
 
 /**
     Defines what a `Page` is. Models participating in the paging system need to adopt
