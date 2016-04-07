@@ -57,6 +57,18 @@ class PageViewControllerProvider: NSObject, UIPageViewControllerDataSource, UIPa
 			} else {
 				let newController = page.storyboardResource.storyboard.instantiateViewControllerWithIdentifier(page.storyboardResource.id)
 				self.pageControllers[page.id] = newController
+
+				// Inject page if controller is aware
+				if var pageAwareController = newController as? PageAwareController {
+					pageAwareController.page = page
+				}
+
+				// Inject view model is controller is aware
+				// TODO
+				if var viewModelAwareController = newController as? PageViewModelAwareController {
+					viewModelAwareController.viewModel = self.model
+				}
+
 				return newController
 			}
 		}
@@ -104,17 +116,6 @@ class PageViewControllerProvider: NSObject, UIPageViewControllerDataSource, UIPa
 			if (nextIndex > -1 && nextIndex < self.model.pages.count) {
 				let nextPage = self.model.pageAtIndex(nextIndex)
 				if let nextController = controllerForPage(nextPage) {
-					// Inject page if controller is aware
-					if var pageAwareController = nextController as? PageAwareController {
-						pageAwareController.page = nextPage
-					}
-
-					// Inject view model is controller is aware
-					// TODO
-					if var viewModelAwareController = nextController as? PageViewModelAwareController {
-						viewModelAwareController.viewModel = self.model
-					}
-
 					return nextController
 				}
 			}
@@ -128,7 +129,8 @@ class PageViewControllerProvider: NSObject, UIPageViewControllerDataSource, UIPa
 		}.first
 
 		if let pageControllerPair = results {
-			return self.model.pageById(pageControllerPair.0)
+			let nextPage = self.model.pageById(pageControllerPair.0)
+			return nextPage
 		}
 		return nil
 	}
