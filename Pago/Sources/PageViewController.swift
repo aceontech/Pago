@@ -21,7 +21,7 @@ import UIKit
  - See `UIViewController` extension in `PageViewControllerSupport.swift`
  */
 public class PageViewController<ViewModelType : PageViewControllerViewModel>: UIPageViewController {
-	private lazy var provider: PageViewControllerProvider = { [unowned self] in
+	public lazy var provider: PageViewControllerProvider = { [unowned self] in
 		let p = PageViewControllerProvider(pageViewController: self, model: self.viewModel)
 		p.pageChangedHandler = { index in
 			// Handle page change events
@@ -41,6 +41,21 @@ public class PageViewController<ViewModelType : PageViewControllerViewModel>: UI
 		// Set up first view controller
 		if let firstController = provider.controllerForPage(self.viewModel.pages.first) {
 			self.setViewControllers([firstController], direction: .Forward, animated: false, completion: nil)
+		}
+	}
+
+	public var allPageConttrollers: [UIViewController] {
+		let controllers = viewModel.pages.map { [unowned self](page) -> UIViewController in
+			return self.provider.controllerForPage(page)!
+		}
+		return controllers
+	}
+
+	public func scrollToNextPage(fromCurrent currentPage: Page) {
+		if let currentIndex = viewModel.indexOfPageById(currentPage.id),
+			nextPage = viewModel.pageAtIndex(currentIndex + 1),
+			nextController = provider.controllerForPage(nextPage) {
+				setViewControllers([nextController], direction: .Forward, animated: true, completion: nil)
 		}
 	}
 }

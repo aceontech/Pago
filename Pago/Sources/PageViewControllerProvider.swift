@@ -7,12 +7,13 @@
 
 import Foundation
 
+public typealias PageChangedHandler = (index: Int) -> ()
+
 /**
  A adopts `UIPageViewControllerDataSource` and `UIPageViewControllerDelegate` and knows
  how to work with pages.
  */
-class PageViewControllerProvider: NSObject, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
-	typealias PageChangedHandler = (index: Int) -> ()
+public class PageViewControllerProvider: NSObject, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
 	/**
 	 Reference to page view controller under management
@@ -37,7 +38,7 @@ class PageViewControllerProvider: NSObject, UIPageViewControllerDataSource, UIPa
 
 	// MARK: - Event Handlers
 
-	var pageChangedHandler: PageChangedHandler?
+	public var pageChangedHandler: PageChangedHandler?
 
 	init(pageViewController: UIPageViewController, model: PageViewControllerViewModel) {
 		self.pageViewController = pageViewController
@@ -77,25 +78,25 @@ class PageViewControllerProvider: NSObject, UIPageViewControllerDataSource, UIPa
 
 	// MARK: - UIPageViewControllerDataSource
 
-	func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+	public func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
 		let nextController = controllerFollowedBy(viewController, direction: .After)
 		return nextController
 	}
 
-	func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+	public func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
 		let previousController = controllerFollowedBy(viewController, direction: .Before)
 		return previousController
 	}
 
 	// MARK: - UIPageViewControllerDelegate
 
-	func pageViewController(pageViewController: UIPageViewController, willTransitionToViewControllers pendingViewControllers: [UIViewController]) {
+	public func pageViewController(pageViewController: UIPageViewController, willTransitionToViewControllers pendingViewControllers: [UIViewController]) {
 		if let nextController = pendingViewControllers.first, nextPage = pageForController(nextController), nextIndex = self.model.indexOfPageById(nextPage.id) {
 			self.nextIndex = nextIndex
 		}
 	}
 
-	func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+	public func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
 		if (completed) {
 			if let handler = self.pageChangedHandler {
 				handler(index: self.nextIndex)
