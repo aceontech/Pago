@@ -58,4 +58,11 @@ public class PageViewController<ViewModelType : PageViewControllerViewModel>: UI
 				setViewControllers([nextController], direction: .Forward, animated: true, completion: nil)
 		}
 	}
+
+	public func scrollToFirstPage() {
+		if let firstPage = viewModel.pageAtIndex(0),
+			firstController = provider.controllerForPage(firstPage) {
+				setViewControllers([firstController], direction: .Forward, animated: false, completion: nil)
+		}
+	}
 }
